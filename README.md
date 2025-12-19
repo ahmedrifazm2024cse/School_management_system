@@ -5,6 +5,7 @@
 A web-based college management system built using React.js and Node.js for managing students, faculty, and academic records.
 
 ## Project Details
+
 - **Project Type:** Final Year Project
 - **Domain:** Web Development
 - **Technology Stack:** MERN Stack (MongoDB, Express.js, React.js, Node.js)
@@ -13,6 +14,7 @@ A web-based college management system built using React.js and Node.js for manag
 ## Features
 
 ### Admin Module
+
 - Student Management (Add, Edit, Delete, View)
 - Faculty Management
 - Course Management
@@ -20,18 +22,21 @@ A web-based college management system built using React.js and Node.js for manag
 - Marks Management
 
 ### Faculty Module
+
 - View Assigned Classes
 - Mark Attendance
 - Enter Marks/Grades
 - Create Announcements
 
 ### Student Module
+
 - View Personal Details
 - Check Attendance Records
 - View Marks/Results
 - Class Timetable
 
 ## Technology Stack
+
 - **Frontend:** React.js, Material-UI
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
@@ -40,40 +45,49 @@ A web-based college management system built using React.js and Node.js for manag
 ## Installation & Setup
 
 ### Prerequisites
+
 - **Node.js** (v16 or higher) - [Download here](https://nodejs.org/)
 - **MongoDB Community Server** - [Download here](https://www.mongodb.com/try/download/community)
 - **Git** (optional) - For cloning the repository
 
 ### Quick Start
+
 1. **Setup Database:**
+
    ```bash
    SETUP_DATABASE.bat
    ```
 
 2. **Start Application:**
+
    ```bash
    START_FULL.bat
    ```
 
 3. **Access the System:**
    - **Frontend:** http://localhost:3000
-   - **Backend API:** http://localhost:3001
-   - **Database:** mongodb://localhost:27017
+   - **Backend API:** https://backend-school-management-3e0z.onrender.com
+   - **Database:** MongoDB (Cloud-hosted)
+   - **Note:** Frontend is configured to connect to production backend
 
 ### Manual Setup (if scripts fail)
+
 1. **Install Dependencies:**
+
    ```bash
    npm install
    cd backend && npm install
    ```
 
 2. **Start MongoDB:**
+
    ```bash
    net start MongoDB
    # OR manually: mongod --dbpath "C:\data\db"
    ```
 
 3. **Start Backend:**
+
    ```bash
    cd backend
    npm start
@@ -85,10 +99,12 @@ A web-based college management system built using React.js and Node.js for manag
    ```
 
 ### Testing
+
 - **Test Backend:** Run `TEST_BACKEND.bat`
-- **Manual Test:** Visit http://localhost:3001/api/test
+- **Manual Test:** Visit https://backend-school-management-3e0z.onrender.com/api/test
 
 ## Project Structure
+
 ```
 college-management-system/
 ├── backend/          # Node.js backend
@@ -98,11 +114,13 @@ college-management-system/
 ```
 
 ## Sample Login Credentials
+
 - **Admin:** Create account with admin role
-- **Faculty:** Create account with teacher role  
+- **Faculty:** Create account with teacher role
 - **Student:** Create account with student role
 
 ## Database Schema
+
 - Users (Authentication)
 - Students (Student records)
 - Teachers (Faculty records)
@@ -114,25 +132,30 @@ college-management-system/
 ### Common Issues
 
 **1. "Backend server not running" error:**
+
 - Run `SETUP_DATABASE.bat` first
 - Ensure MongoDB is installed and running
 - Check if ports 3000 and 3001 are available
 
 **2. "Database connection failed":**
+
 - Install MongoDB Community Server
 - Create data directory: `mkdir C:\data\db`
 - Start MongoDB service: `net start MongoDB`
 
 **3. "Cannot add student" error:**
+
 - Ensure all required fields are filled
 - Check for duplicate email or roll number
 - Verify backend server is running
 
 **4. Port already in use:**
+
 - Kill existing processes: `taskkill /f /im node.exe`
 - Or change ports in `.env` files
 
 ### Student Management Features
+
 - ✅ Add new students with validation
 - ✅ Edit existing student details
 - ✅ Delete students with confirmation
@@ -141,6 +164,7 @@ college-management-system/
 - ✅ Real-time error handling
 
 ### Database Schema
+
 ```javascript
 Student: {
   name: String (required, 2-50 chars)
@@ -154,6 +178,7 @@ Student: {
 ```
 
 ## Future Enhancements
+
 - Email notifications
 - Mobile app version
 - Advanced reporting
@@ -162,10 +187,13 @@ Student: {
 - Attendance analytics
 
 ---
+
 **Developed as part of Computer Science Engineering curriculum**
 
 ### Support
+
 If you encounter issues:
+
 1. Run `TEST_BACKEND.bat` to diagnose problems
 2. Check console logs in browser (F12)
 3. Verify MongoDB is running in Task Manager
